@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+        <link href="https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i|Roboto:100,300,400|Saira+Condensed:300,400|Open+Sans|300,400" rel="stylesheet">
+        <link href="./favicon.ico" type="image/x-icon" rel="shortcut icon">
+        <link href="./favicon.ico" type="image/x-icon" rel="icon">
+        <title>DCO Network</title>
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/style.css">
+
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
+        <style type="text/css">
+          a{
+            color: #000;
+          }
+          #head{
+            background-color: #fff;
+            color: #000;
+            box-shadow: 0 0 1px rgba(0,0,0,0.25);
+          }
+          #head>div>ul>li.active,#head>div>ul>li.active a{
+            color:#6B74F3;
+          }
+          #head>div>ul>li:not(.lang):hover{
+            color:#6B74F3;
+          }
+          html,body{
+            background-color: #fff;
+            color: #333333;
+            font-weight: 400;
+          }
+          .q_left{
+            width: 300px;
+            height: 100vh;
+            
+            float: left;
+            position: absolute;
+            /*left: 0;
+            top: 0;*/
+            border-right: 1px solid #ededed;
+            padding-right: 30px;
+          }
+          .q_left ul{
+            overflow-y: scroll;
+            height: calc(100vh - 50px);
+            padding-bottom: 80px;
+          }
+          .q_right{
+            margin-left: 300px;
+          }
+          .q_right .q_right-info{
+            margin: 0 auto;
+            width: 840px;
+          }
+          .tit_1{
+            line-height: 48px;
+            letter-spacing: 0px;
+            color: #333333;
+            font-size: 36px;
+            margin-bottom: 42px;
+          }
+          p{
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #333333;
+            line-height: 30px;
+          }
+          .table-of-contents li{
+            width: 300px;
+            margin-bottom: 30px;
+
+          }
+          .table-of-contents li.active{
+             border-right: 1px solid #396cff;
+          }
+          .table-of-contents a{
+            padding-left: 30px;
+
+            padding-right: 30px;
+            display: inline-block;
+            width: 100%;
+            letter-spacing: 0;
+            font-weight: 400;
+          }
+          .table-of-contents a:hover{
+             padding-left: 30px;
+             color: #396cff;
+             font-weight: 400;
+              border-left:none;
+          }
+          .table-of-contents a.active{
+            color: #396cff;
+            padding-left: 30px;
+            border-left:none;
+            font-weight: 400;
+            letter-spacing: 0;
+            
+          }
+        </style>
+	</head>
+	<body>
+      <div id="head" class="head" >
+            <div class="container" style="height: 100%;">
+              <img src="../images/logo-black.svg" class="y-mid logo-top" style="left: 0;width: 200px;">
+              <ul class="y-mid">
+                <li > <a href="index.html"  >Home</a></li>
+                <li ><a href="dco-network.pdf"  target="_blank">Whitepaper</a></li>
+                <li><a href="index.html#roadmap" >Roadmap</li>
+                <li  class="active"><a href="question.html" target="_blank">Q&A</a></li>
+                <li class="lang" style="position: relative;">
+                  <span id="lang">
+                    <span  id="cur-lang-name" style="display: inline-block;width: 40px;">EN</span>
+                    <img  id="cur-lang-icon" src="images/usa.png" width="16"> 
+                    <img src="images/down-black.png" width="16" style="margin-left: 1px;">
+                  </span>
+                    
+                  <ul id="other-lang" style="display: none;opacity: 0;">
+                    <li>
+                      <span>CN</span>
+                      <img src="images/chn.png" width="16"> 
+                    </li>
+                    <!-- <li >
+                      <span>JP</span>
+                      <img src="images/jpn.png" width="16"> 
+                    </li> -->
+                  </ul>
+                </li>
+              </ul>
+            </div>
+      </div>
+		  <div class="q_left" id="left">
+
+        <div class="col hide-on-small-only m3 l2" >
+          <div class="toc-wrapper pinned" style="top: 0;">
+            <div style="height: 1px;">
+              <div style="border-bottom: 1px solid #eee;width: 300px;padding-top: 70px;">
+                <input id="search" style="width: 300px;height: 50px;border:none;padding-left: 30px;border-right:1px solid #eee; " placeholder="search" type="" name="">
+                <!-- <img id="search-btn" src="images/chn.png" style="cursor: pointer;"> -->
+              </div>
+              <ul class="section table-of-contents my-scroll">
+                  <li><a class="question" href="#q1">Is DCO Networkn a blockchain platform running independently?</a></li>
+                  <li><a class="question" href="#q2">What is DCO？</a></li>
+                  <li><a class="question" href="#q3">What is the difference between DCO and DAO</a></li>
+                  <li><a class="question" href="#q4">What is the relationship between DCO and the open source software team?</a></li>
+                  <li><a class="question" href="#q5"> What is DCOT?</a></li>
+                  <li><a class="question" href="#q6">What is HOT?</a></li>
+                  <li><a class="question"href="#q7">Why does DCO issue DCOT on DCO Network instead of issuing ERC-20 or ERC-721 directly in Ethereum, EOS?</a></li>
+                  <li><a class="question" href="#q8">What color does the DCO coin play on the DCO platform?</a></li>
+                  <li><a class="question" href="#q9">What is the difference of DCO compared to Bitcoin and Ethereum?</a></li>
+                  <li><a class="question" href="#q10">What is the total amount of DCO coins issued?</a></li>
+                  <li><a class="question" href="#q11"> How is the DCO coin distributed?</a></li>
+                  <li><a class="question" href="#q12">Is DCO coin mining? What rules are used to mine?</a></li>
+                  <li><a class="question" href="#q13">Where can DCO tokens be consumed and traded?</a></li>
+                  <li><a class="question" href="#q14"> Is there a governance mechanism in DCO?How does it work?</a></li>
+                  <li><a class="question" href="#q15">About DCO Network development schedule？ </a></li>
+              </ul>
+            </div>
+          </div>
+        </div>  
+      </div>
+       <div class="q_right" style="padding-top: 100px;">
+          <div class="q_right-info">
+            <div id="q1"   class="section scrollspy">
+              <h3 class="tit_1"> Is DCO Networkn a blockchain platform running independently?</h3>
+              <p>
+                t the first stage of development, DCO Network will not be as a stand-alone blockchain program, but rather as a DAPP running in Ethereum, EOS and etc. operating system platforms. While the DCO will provide series of protocols, tools and basic services, on the strength of DCO, users can creating and operating a distributed collaborative project organization(DCO). Therefore, the DCO can be viewed as a platform composed by the middleware (middleware) and application (App). The DCO, all kinds of DCO, as well as related communities, trading institutions, organizations and services, constitute the DCO ecology jointly.
+              </p>
+            </div>
+            <div id="q2"  class="section scrollspy">
+              <h3 class="tit_1">What is DCO？</h3>
+              <p>
+               First of all, DCO is a human collaboration for value creation. For the purpose of value creation, it requires the DCO members share common goals and strong cooperation, which is obviously different from loosely coupled and weakly connected network information sharing communities, or social networks based on interests and relationships.So that, a software development team is DCO, a film script writing team is DCO, but an online BBS that only talks about the movie, or an online fan club that only praises a star, they are not DCO.
+              </p>
+              <p>
+              There is no doubt that strong collaboration requires motivation.In DCO, every member has the absolute freedom to quit, in order to provide sufficient incentives, DCO will issue its own creative Distributed Organization Token(DCOT) as the main value and incentive Material, at the same time, DCO will establish a distribution mechanism and exchange rules fairness and efficiency to make the project successful.
+              </p>
+            </div>
+            <div id="q3"  class="section scrollspy">
+              <h3 class="tit_1">What is the difference between DCO and DAO</h3>
+              <p>
+                After the rise of smart contract technology, DAO was be build as a form of human organization on the blockchain proposed by Dan Larimer. As the name implies, DAO has two outstanding features, the first is decentralization, members of the organization shall use the currency right as the sole certificate of entitlement; the second is automated governance, where organizations operation automatically based on a range of smart contracts.
+              </p>
+              <p>We believe that DAO is a very important organizational platform on blockchain, but it is not the only one. DCO does not require the organization must be decentralized, or the rights within the organization must be based on currency rights, and not require the replacement of artificial governance mechanism by smart contracts. DCO hands these decisions over to the organization itself, only providing the necessary tools to help the organization build and operation. For example, a DCO can be developed in a centralized way, and appoint one person as the final decision maker.Another DCO may use the share of DCOT as the distribution mechanism of voting rights. DCO may issue a special HOT representative decision right, even could make a price transfer of decision right. DCO collaboration can be diverse, as long as people across geographic and border can build a strong collaboration on the Internet, it is DCO. </p>
+               
+              <p>From the above description, DAO is also a DCO.</p>
+            </div>
+            <div id="q4"  class="section scrollspy">
+              <h3 class="tit_1">  What is the relationship between DCO and the open source software team?</h3>
+              <p>
+              After the rise of smart contract technology, DAO was be build as a form of human organization on the blockchain proposed by Dan Larimer. As the name implies, DAO has two outstanding features, the first is decentralization, members of the organization shall use the currency right as the sole certificate of entitlement; the second is automated governance, where organizations operation automatically based on a range of smart contracts.</p>
+ 
+              <p>We believe that DAO is a very important organizational platform on blockchain, but it is not the only one. DCO does not require the organization must be decentralized, or the rights within the organization must be based on currency rights, and not require the replacement of artificial governance mechanism by smart contracts. DCO hands these decisions over to the organization itself, only providing the necessary tools to help the organization build and operation. For example, a DCO can be developed in a centralized way, and appoint one person as the final decision maker.Another DCO may use the share of DCOT as the distribution mechanism of voting rights. DCO may issue a special HOT representative decision right, even could make a price transfer of decision right. DCO collaboration can be diverse, as long as people across geographic and border can build a strong collaboration on the Internet, it is DCO.</p>
+               
+              <p>From the above description, DAO is also a DCO.</p>
+            </div>
+
+            <div id="q5"  class="section scrollspy">
+              <h3 class="tit_1">What is DCOT?</h3>
+              <p>
+             Each DCO needs to define and issue its own internal master token, called DCO Token, or DCOT. For example, if the team developing the PostgreSQL database is transformed into a DCO, they can issue PSQL.DCO as their own internal master token, and the team developing the EOS can issue EOS.DCO as their own internal master token. </p>
+ 
+              <p>The existence and application of DCOT is a fundamental difference between DCO and traditional online organizations.  According to different DCO settings, DCOT can be a utility token, a security token, or a hybrid one. The DCO determines the specific use and benefits of DCOT.</p>
+               
+              <p>DCOT is also the equity base for DCO to obtain mining revenue.</p>
+
+            </div>
+
+            <div id="q6"  class="section scrollspy">
+              <h3 class="tit_1">What is HOT?</h3>
+              <p>The Higher Order Token (HOT) is an encrypted digital token defined by the DCO based on its own DCOT.</p>
+ 
+              <p>In the study of the Token, we found that the Token is hierarchical. For example, in the DCO Network, the DCO coin is a zero-order standard Token, and the DCOT of each DCO is defined based on the DCO coin and is priced in DCO coin, so it is a first-order Token. Correspondingly, if a higher level token is defined on the basis of DCOT, it can be called a high order token.</p>
+              <p>The so-called "high-order" means that the price of HOT is a function of the corresponding base DCOT price, or HOT is a derivative of DCOT. In fact, in specific applications, HOT can represent various interests, commodities, and qualifications in the DCO.</p>
+              <p>HOT has many uses, such as:</p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span>A DCO can release a reward for solving a problem as a HOT. If the developer solves the problem, you can get the HOT and choose the time you think is appropriate.</span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span>The DCO can also establish a class of HOT that represent decision-making voting rights, which can separate political rights from economic rights.</span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span>DCO also can sell a limited edition digital badge denominated in DCOT.</span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span>A DCO can express the right to use one of its online software services (such as 6 months service, 12 months service) as HOT. After purchasing this HOT, users can enjoy the service of corresponding duration. If the user ends the service, there is still the remaining service time in the HOT, and the user can sell the HOT in the secondary market.</span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span>The DCO can also package several offers and benefits in an aggregated HOT, where users can purchase, enjoy the services, and resell them.</span>
+                    </span>
+              </p>
+
+ 
+              <p>The trade of HOT will form an active market in the DCO Network</p> 
+            </div>
+
+            <div id="q7"  class="section scrollspy">
+              <h3 class="tit_1">Why does DCO issue DCOT on DCO Network instead of issuing ERC-20 or ERC-721 directly in Ethereum, EOS?</h3>
+              <p>DCO Net work is a platform for the vertical field of software development. It provides DCO with services far beyond the common blockchain platforms such as Ethereum and EOS, including but not limited to:</p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span>Easy to distribution, rich CV and economic system templates, let DCO “one-click certification”</span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span>By using a technology like "Lightning Network", you can do creat distribution, payment, transfer etc effectively. Most operations can be completed in seconds at DCO Net work.</span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span>The original high-order pass (HOT) concept and technology support a wide range of application scenarios. The same function is required in the Ethereum and EOS development to complete complex smart contracts.</span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span>Before 2078, DCO obtained the DCO coins by selling DCOT, and get the mining revenue. </span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span> Through flexible applications DCOT and HOT, DCO can easily create complex economic and governance behaviors such as creation, management, decision making, trading, financing, incentives, and distribution on DCO Net work.</span>
+                    </span>
+              </p>
+            </div>
+
+            <div id="q8"  class="section scrollspy">
+              <h3 class="tit_1">What color does the DCO coin play on the DCO platform?</h3>
+              <p>
+             The DCO is the digital standard currency in the entire DCO Network. Each DCO in the DCO Net work must unconditionally accept DCO as the basic currency for transaction intermediation, value measurement.</p>
+            </div>
+
+
+            <div id="q9"  class="section scrollspy">
+              <h3 class="tit_1">What is the difference of DCO compared to Bitcoin and Ethereum?</h3>
+              <p> DCO is the base currency, playing the role of the digital currency support its high-order pass, smart contracts and DAPPs in the global developer community. In other words, in the DCO ecosystem, high-order passes can only be purchased in DCO, and as a value unit of measure in smart contracts and DAPP.</p>
+
+              <p>Bitcoin and Ethereum are the Digital standard currency in the entire cryptocurrency and blockchain industry, and they are more fundamental than DCO.DCO can be traded for Bitcoin, Ethereum and other encrypted digital currencies on the market.</p>
+
+              <p>Therefore, if a user want to sell a high-order pass on the DCO platform and obtain Bitcoin or Ethereum, he needs to sell the pass to obtain the DCO first and then exchange the DCO into Bitcoin or Ethereum.</p>
+            </div>
+
+
+            <div id="q10"  class="section scrollspy">
+              <h3 class="tit_1">What is the total amount of DCO coins issued?</h3>
+              <p>A total of 21 billion DCO coins were issued, which were all released from 2018 to 2078 and will never be issued. The distribution plan is as follows:</p>
+              <img src="images/qa_01.png">
+              <p>DCO mines through self-developed POS. </p>
+ 
+              <p>So when the DCO economy develops rapidly, DCO coins will tend to deflate. In this case, the DCO Fund Management Committee can conduct a partial reverse repurchase to increase market liquidity.</p>
+ 
+            </div>
+
+            <div id="q11"  class="section scrollspy">
+              <h3 class="tit_1">How is the DCO coin distributed?</h3>
+              <p>The total number of DCO is 21 billion, of which 6 billion are used for private placement, marketing, community building, team incentives, etc., 5 billion are used as fund reserves, and 10 billion will be mined between 2018 and 2078.</p>
+         
+              <p>Among them, 3 billion private placements accounted for 14.3% of the total DCO issuance, and plans to raise 30,000 ETH. </p>
+ 
+              <p>Please refer to Chapter 4 for the specific allocation plan.</p>
+ 
+            </div>
+
+            <div id="q12"  class="section scrollspy">
+              <h3 class="tit_1"> Is DCO coin mining? What rules are used to mine?</h3>
+              <p>Between 2018 and 2078, new DCO coins were issued through mining. Mining is performed for a fixed period of time (determined by the height of the underlying chain block).</p>
+         
+              <p>The mining body of the DCO coin is the DCO. All DCOs joining DCO mine based on their own DCO reserves.</p>
+ 
+ 
+            </div>
+
+            <div id="q13"  class="section scrollspy">
+              <h3 class="tit_1"> Where can DCO tokens be consumed and traded?</h3>
+              <p>The main purpose of the DCO token is to purchase other passes issued by the DCO on the DCO Network, as well as the products and services offered. The DCOT issued by each DCO can only be purchased by DCO. </p>
+         
+              <p>DCO Network encourages DCO to express all of its products and services as a pass, but it is not mandatory, so each DCO can still sell its products and services at DCO.</p>
+              <p>Typical scenarios are as follows: </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span>Users use DCO to purchase DCOT or HOT from a DCO. </span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span>Users use DCO to order Web services provided by a DCO</span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span>The user purchases an e-book provided by a DCO with DCO</span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span>User rewards an author or question responder with DCO</span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span>DCO uses DCO to compete for mining rights</span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span> The user holds a DCOT and wants to switch to another DCOT, using DCO as the transaction medium. </span>
+                    </span>
+              </p>
+              <p>DCO is the base currency of the entire DCO Network ecosystem, playing a full range of trading media, value storage and value measurement.</p>
+            </div>
+
+             <div id="q14"  class="section scrollspy">
+              <h3 class="tit_1"> Is there a governance mechanism in DCO?How does it work?</h3>
+              <p>The DCO Fund Management Committee plays a role as a governance body throughout the DCO Network ecosystem. The DCO Foundation has a starting capital of 5 billion DCO tokens and was initially locked. It will release 500 million DCO per year from 2018 to 2027, providing open market operations funds for the DCO Fund Management Committee. Each batch of funds used and market operations of the DCO Fund Management Committee will disclose the accounts and provide audit interfaces and tools to be monitored and audited by all DCOs and users. Large-scale operations will be announced in advance. </p>
+         
+              <p>The DCO Fund Management Committee is composed of DCO core team and DCO representatives, with regular staff adjustments.</p>
+ 
+ 
+            </div>
+
+             <div id="q15"  class="section scrollspy">
+              <h3 class="tit_1">About DCO Network development schedule </h3>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span> vMarch 2018: White paper release and complete blockchain acceleration middleware development </span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span> vMarch 2018: Complete preliminary design of system functions, release DCO, and develop DCO basic smart contract</span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span>vMarch 2018: Complete private-equity </span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span>vMay 2018: Complete the Ethereum beta version and began to realize the interface of Github and CSDN</span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span> vProvide the Web Service for users order DCO with DCO</span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span>vSeptember 2018: Complete the EOS beta version</span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span>vOctober 2018: DCO in batch operation,launch mining and airdrop</span>
+                    </span>
+              </p><p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span>vJune 2019: Launch the self-developed token supporting system</span>
+                    </span>
+              </p>
+              <p class="text star clearfloat">
+                    <span class="xing">* </span>
+                    <span style="width: 800px;">
+                        <span> vDecember 2019: DCO Network 1.0 release </span>
+                    </span>
+              </p>
+ 
+ 
+            </div>
+          </div>
+         
+       </div>
+
+
+
+
+
+
+
+        
+	</body>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../js/particle.js"></script>
+  <script type="text/javascript">
+    var baseUrl = '../'
+  </script>
+  <script src="../js/common.js"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+
+
+       $('.scrollspy').hide();
+       var curHash = '#q1';
+       $('#'+curHash.split('#')[1]).show()
+       $('.table-of-contents a').eq(0).addClass('active')
+       $('.table-of-contents a').on('click',function(){
+          $('.table-of-contents a').removeClass('active')
+          $('.table-of-contents a').parent().removeClass('active')
+          $(this).addClass('active')
+          $(this).parent().addClass('active')
+          curHash = $(this).attr('href')
+          $('.scrollspy').hide();
+          $('#'+curHash.split('#')[1]).show()
+       })
+
+          
+
+
+
+
+       var  keyArr = [
+         'Is DCO Networkn a blockchain platform running independently？',
+         'What is DCO？',
+         'What is the difference between DCO and DAO？',
+         'What is the relationship between DCO and the open source software team？',
+         'What is DCOT？',
+         'What is HOT？',
+         'Why does DCO issue DCOT on DCO Network instead of issuing ERC-20 or ERC-721 directly in Ethereum, EOS？',
+         'What color does the DCO coin play on the DCO platform？',
+         'What is the difference of DCO compared to Bitcoin and Ethereum？',
+         'What is the total amount of DCO coins issued？',
+         'How is the DCO coin distributed？',
+         'Is DCO coin mining? What rules are used to mine？',
+         'Where can DCO tokens be consumed and traded？',
+         'Is there a governance mechanism in DCO?How does it work？',
+         'About DCO Network development schedule？'
+       ]
+ 
+       $('#search').on('keyup',function(event){
+
+          event =  event || window.event
+          let keyword = $('#search').val()
+          if(event.keyCode === 13){
+              if(keyword && keyword.length>0){
+                  keyArr.forEach(function(v,i){
+                  if(v.toLowerCase().indexOf(keyword.toLowerCase())<0){
+                       curHash = '#' + i
+                       $('.question').eq(i).parent().hide()
+                    }
+                  })
+              }
+          }
+         
+          if(keyword.length === 0){
+            $('.question').parent().css('display','block')
+          }
+       })
+
+       $('#search-btn').on('click',function(){
+         $('#left').animate({
+          left:'-300px'
+         },300)
+         $('.q_right').animate({
+           marginLeft:0
+         },300)
+       })
+      
+    })
+  </script>
+</html>
